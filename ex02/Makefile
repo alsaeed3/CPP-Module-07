@@ -6,7 +6,7 @@
 #    By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/25 16:58:20 by alsaeed           #+#    #+#              #
-#    Updated: 2024/07/31 21:01:20 by alsaeed          ###   ########.fr        #
+#    Updated: 2024/08/01 18:16:25 by alsaeed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ NAME = array
 
 CXX = c++
 
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -g3
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -ggdb3
 
 INCLUDES = -I./
 

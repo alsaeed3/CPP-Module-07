@@ -6,7 +6,7 @@
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 18:23:56 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/08/01 16:50:01 by alsaeed          ###   ########.fr       */
+/*   Updated: 2024/08/01 19:06:12 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,15 @@ Array<T>::Array() : _array(NULL), _len(0) {
 }
 
 template <class T>
-Array<T>::Array(unsigned int n) : _array(new T[n]()), _len(n) {
+Array<T>::Array(unsigned int n) : _array(NULL), _len(n) {
 
-        if (n == 0) {
-            throw std::invalid_argument("Size of array cannot be zero");
-        }
+    if (n > 0) {
 
-	return;
+        _array = new T[n]();
+    } else {
+
+        throw std::invalid_argument("Size of array cannot be zero");
+    }
 }
 
 template <class T>
@@ -52,7 +54,9 @@ Array<T> &Array<T>::operator=(const Array &src) {
         delete[] _array;
         _len = src._len;
         _array = new T[_len];
+
         for (std::size_t i = 0; i < _len; i++) {
+
             _array[i] = src._array[i];
         }
     }

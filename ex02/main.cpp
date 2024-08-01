@@ -6,7 +6,7 @@
 /*   By: alsaeed <alsaeed@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 18:19:44 by alsaeed           #+#    #+#             */
-/*   Updated: 2024/08/01 17:26:45 by alsaeed          ###   ########.fr       */
+/*   Updated: 2024/08/01 19:08:11 by alsaeed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main()
 {
 	Array<int> empty;
 
-	Array<int> a(2);
+	Array<int> a(3);
 	Array<int> b(5);
 
 	for (unsigned int i = 0; i < a.size(); i++)
